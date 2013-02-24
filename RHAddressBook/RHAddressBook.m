@@ -126,7 +126,8 @@ NSString * const RHAddressBookPersonAddressGeocodeCompleted = @"RHAddressBookPer
         [_addressBookThread setName:[NSString stringWithFormat:@"RHAddressBookInstanceThread for instance %p", self]];
         [_addressBookThread start];
         
-        _sharedServices = [RHAddressBookSharedServices sharedInstance]; //pointer to singleton (this causes the geo cache to be rebuilt if needed)
+        #warning - CP: Disable Geo
+//        _sharedServices = [RHAddressBookSharedServices sharedInstance]; //pointer to singleton (this causes the geo cache to be rebuilt if needed)
         
         //setup
         
